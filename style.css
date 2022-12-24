@@ -26,7 +26,7 @@ section#first {
 }
 
 div + div{
-    margin-top: 10vh;
+    margin-top: min(10vh, 10vw);
 }
 
 a:link {
