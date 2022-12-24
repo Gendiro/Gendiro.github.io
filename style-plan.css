@@ -2,23 +2,20 @@
 
 ul{
     list-style-position: inside;
-    width: 50vw;
+    width: 30vw;
     margin: 0;
+    padding-inline-start: 5vw;
+    font-size: min(2.75vh, 2.75vw);
 }
 
 li + li {
     margin-top: 4vh;
 }
-
-#plan_img{
-    width: 40vw;
-    height:65vh;
-}
-
 #floors{
     text-align: start;
-    display: inline-flex;
+    display: flex;
     width: 100vw;
+    justify-content: center;
 }
 body {
     font-family: 'Red October', sans-serif;
@@ -89,4 +86,34 @@ img#logo {
     margin-right: 10vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
+}
+
+#floor_description {
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+    #plan_img{
+        width: 30vw;
+        height: 40vw;
+        margin-right: 10vh;
+    }
+    #floor_description {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #plan_img{
+        width:60vw;
+        height: 60vw;
+        margin-bottom: 10vh;
+    }
+    #floor_description {
+        flex-direction: column;
+    }
 }

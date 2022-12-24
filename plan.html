@@ -19,16 +19,24 @@
         </div>
         <div id = "floors">
             <ul>
-                <li onmouseover="change_pic(1)">1 Этап. Подземная часть</li>
-                <li onmouseover="change_pic(2)">2 Этап. Входная часть</li>
-                <li onmouseover="change_pic(3)">3 Этап. Биоэтаж</li>
-                <li onmouseover="change_pic(4)">4 Этап. Этаж развлечений</li>
-                <li onmouseover="change_pic(5)">5 Этап. Библиотека</li>
-                <li onmouseover="change_pic(6)">6 Этап. Лаборатория</li>
-                <li onmouseover="change_pic(7)">7 Этап. Аэродром и ;_!;;`№;</li>
+                <li onmouseover="change_pic(1)" onclick="change_pic(1)">1 Этап. Подземная часть</li>
+                <li onmouseover="change_pic(2)" onclick="change_pic(2)">2 Этап. Входная часть</li>
+                <li onmouseover="change_pic(3)" onclick="change_pic(3)">3 Этап. Биоэтаж</li>
+                <li onmouseover="change_pic(4)" onclick="change_pic(4)">4 Этап. Этаж развлечений</li>
+                <li onmouseover="change_pic(5)" onclick="change_pic(5)">5 Этап. Библиотека</li>
+                <li onmouseover="change_pic(6)" onclick="change_pic(6)">6 Этап. Лаборатория</li>
+                <li onmouseover="change_pic(7)" onclick="change_pic(7)">7 Этап. Аэродром и ;_!;;`№;</li>
                 <li><a href="index.html">Вернуться на главную</a></li>
             </ul>
-            <img src="floor_1.png" id = "plan_img">
+            <div id="floor_description">
+                <img src="floor_1.png" id = "plan_img">
+                <span id="description">
+                    Этот этаж будет служить входом в великий шпиль,
+                    ознаменовывая путь вверх или вниз по великому
+                    шпилю, ну и все такое, викинг, делай блять
+                    описание ну ебанный рот, я устал кодить
+                </span>
+            </div>
         </div>
     </section>
 </body>
