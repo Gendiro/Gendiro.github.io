@@ -11,3 +11,8 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => {observer.observe(el)});
+
+function change_pic(index) {
+    const pic = document.getElementById("plan_img");
+    pic.src = "floor_" + index + ".png";
+}

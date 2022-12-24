@@ -1,0 +1,92 @@
+@import url('https://fonts.cdnfonts.com/css/red-october-2');       
+
+ul{
+    list-style-position: inside;
+    width: 50vw;
+    margin: 0;
+}
+
+li + li {
+    margin-top: 4vh;
+}
+
+#plan_img{
+    width: 40vw;
+    height:65vh;
+}
+
+#floors{
+    text-align: start;
+    display: inline-flex;
+    width: 100vw;
+}
+body {
+    font-family: 'Red October', sans-serif;
+    font-size: 2vw;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: inline-block;
+}
+
+section#first {
+    background: url("bg2.jpg") no-repeat center center fixed;
+    color: #dfb57a;
+    font-size: min(3.5vh, 3.5vw);
+    text-align: center;   
+}
+
+div + div{
+    margin-top: min(10vh, 10vw);
+}
+
+a:link {
+    color: inherit;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.header {
+    background-color: rgb(243, 238, 232);
+    border-radius: 0px 0px 50px 50px;
+    min-width: 80vw;
+    min-height: 15vh;
+    margin-left:10vw;
+    margin-right: 10vw;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.header h1 {
+    padding-left: 20vw;
+    padding-top: 3vh;
+}
+
+img#logo {
+    height: 10vw;
+    width: 10vw;
+    align-self: left;
+    margin-right: 10vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
