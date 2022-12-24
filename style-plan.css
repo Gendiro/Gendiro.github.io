@@ -88,11 +88,17 @@ img#logo {
     margin-bottom: 2vh;
 }
 
+ul {
+    float: right;
+}
+
 #floor_description {
     display: flex;
     margin-left: 5vw;
     margin-right: 5vw;
     justify-content: center;
+    width: 70vw;
+    float: left;
 }
 
 @media screen and (min-width: 900px) {
