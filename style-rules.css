@@ -6,7 +6,7 @@ body {
     font-size: 2vw;
     margin: 0;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 section {
@@ -19,8 +19,8 @@ section {
 }
 
 section#first {
-    background: url("bg1.jpg") no-repeat center center fixed;
-    color: #dfb57a;
+    background: url("bg3.jpg") no-repeat center center fixed;
+    color: black;
     font-size: min(3.5vh, 3.5vw);
     text-align: center;   
 }
@@ -71,3 +71,64 @@ img#logo {
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
+
+#description {
+    float:left;
+}
+
+#all_rules {
+    display: inline-block;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+    margin-bottom: 10vh;
+}
+
+#list {
+    width: 50vw;
+    height: 80vh;
+    margin: 0;
+    float: left;
+    text-align: center;
+}
+
+ul {
+    height: 100%;
+}
+
+span {
+    display: block;
+    
+}
+
+
+#rules {
+    font-size: 1.5vh;
+    margin-top: 1vh;
+    margin-right: 5vw;
+    height: 60vh;
+    width: 40vw;
+    float: right;
+    overflow-y: scroll !important;
+}
+
+ul {
+    list-style-position: inside;
+    width: 30vw;
+    margin-top: 1vh;
+    padding-inline-start: 5vw;
+    font-size: min(2.75vh, 2.75vw);
+}
+
+@media screen and (max-width: 900px) {
+    li + li {
+        margin-top: 15vh;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    li + li {
+        margin-top: 5vh;
+    }
+}
+
