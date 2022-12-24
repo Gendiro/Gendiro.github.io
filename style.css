@@ -21,7 +21,7 @@ section {
 section#first {
     background: url("bg1.jpg") no-repeat center center fixed;
     color: #dfb57a;
-    font-size: 3.5vh;
+    font-size: min(3.5vh, 3.5vw);
     text-align: center;   
 }
 
