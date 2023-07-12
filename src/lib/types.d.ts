@@ -16,5 +16,5 @@ export interface compactImageData {
 	title: string;
 	src: string;
 	alt: string;
-	date: Date;
+	date: string;
 }
