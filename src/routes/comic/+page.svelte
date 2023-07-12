@@ -19,30 +19,34 @@
 		nextComic();
 	});
 
-    async function nextComic() {
-        const myEmail = 'r.pogrebnyak@innopolis.university';
-        const URLParams = new URLSearchParams();
-        URLParams.set('email', myEmail);
+	async function nextComic() {
+		const myEmail = 'r.pogrebnyak@innopolis.university';
+		const URLParams = new URLSearchParams();
+		URLParams.set('email', myEmail);
 
-        const comicIdRequestAPI = 'https://fwd.innopolis.app/api/hw2';
-        const comicIdRequestURL = `${comicIdRequestAPI}?${URLParams}`;
+		const comicIdRequestAPI = 'https://fwd.innopolis.app/api/hw2';
+		const comicIdRequestURL = `${comicIdRequestAPI}?${URLParams}`;
 
-        const comicIdResponse = await fetch(comicIdRequestURL);
-        const comicId = (await comicIdResponse.json()) as number;
+		const comicIdResponse = await fetch(comicIdRequestURL);
+		const comicId = (await comicIdResponse.json()) as number;
 
-        const comicRequestAPI = 'https://fwd.innopolis.university/api/comic?id=';
-        const comicResponse = await fetch(comicRequestAPI + comicId);
-        const comic = (await comicResponse.json()) as comic;
+		const comicRequestAPI = 'https://fwd.innopolis.university/api/comic?id=';
+		const comicResponse = await fetch(comicRequestAPI + comicId);
+		const comic = (await comicResponse.json()) as comic;
 
-        const compactImageData = {
-            title: comic.safe_title,
-            src: comic.img,
-            alt: comic.alt,
-            date: new Date(parseInt(comic.year), parseInt(comic.month) - 1, parseInt(comic.day)).toString()
-        } as compactImageData;
+		const compactImageData = {
+			title: comic.safe_title,
+			src: comic.img,
+			alt: comic.alt,
+			date: new Date(
+				parseInt(comic.year),
+				parseInt(comic.month) - 1,
+				parseInt(comic.day)
+			).toString()
+		} as compactImageData;
 
-        imageData = compactImageData;
-    }
+		imageData = compactImageData;
+	}
 </script>
 
 <div id="xkcd-comic-container">
