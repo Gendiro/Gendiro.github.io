@@ -1,5 +1,6 @@
 <script>
 	import FadeInText from './FadeInText.svelte';
+	import cat_png from '$lib/images/cat.png';
 </script>
 
 <div id="main-page">
@@ -14,13 +15,13 @@
 			<p><FadeInText text="> Fullstack webdev enthusiast" /></p>
 			<p><FadeInText text="> Love to code in general" /></p>
 		</div>
-		<img src="images/cat.png" alt="cute pfp" id="cat-pfp" />
+		<img src={cat_png} alt="cute pfp" id="cat-pfp" />
 	</main>
 </div>
 
 <style>
 	:root {
-		background: url('images/main_background.png') #1b1b1b no-repeat bottom left / 100% auto;
+		background: url($lib/images/main_background.png) #1b1b1b no-repeat bottom left / 100% auto;
 		width: 100vw;
 		height: 100vh;
 	}
