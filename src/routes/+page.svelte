@@ -1,17 +1,17 @@
 <script lang="ts">
 	import FadeInText from './FadeInText.svelte';
 	import cat_png from '$lib/images/cat.png';
-	import {fly} from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { onDestroy, onMount } from 'svelte';
-	import { goto } from "$app/navigation";
+	import { goto } from '$app/navigation';
 
 	let isLoading = true;
 	onMount(() => {
-			isLoading = false;
+		isLoading = false;
 	});
 
 	onDestroy(() => {
-			isLoading = true;
+		isLoading = true;
 	});
 
 	const goto_fade = (addr: string) => {
@@ -21,10 +21,10 @@
 </script>
 
 {#if !isLoading}
-	<div id="main-page" out:fly={{y:500, duration:1000}}>
+	<div id="main-page" out:fly={{ y: 500, duration: 1000 }}>
 		<nav>
-			<button on:click={() => goto_fade("/portfolio")} class="main-button">Portfolio</button>
-			<button on:click={() => goto_fade("/contacts")} class="main-button">Contact me</button>
+			<button on:click={() => goto_fade('/portfolio')} class="main-button">Portfolio</button>
+			<button on:click={() => goto_fade('/contacts')} class="main-button">Contact me</button>
 		</nav>
 		<main>
 			<h1><FadeInText text="> Hello, I'm Roman Pogrebnyak" /></h1>
@@ -42,7 +42,7 @@
 
 <style>
 	:root {
-			background-color: #1b1b1b;
+		background-color: #1b1b1b;
 	}
 	#main-page {
 		background: url($lib/images/main_background.svg) #1b1b1b no-repeat bottom left / 100% auto;
@@ -82,14 +82,14 @@
 		bottom: 3vh;
 		left: 7%;
 	}
-  .main-button {
-      background-color: transparent;
-      border-width: 0;
-      font-family: inherit;
-      font-size: inherit;
-      font-style: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-			color: white;
-  }
+	.main-button {
+		background-color: transparent;
+		border-width: 0;
+		font-family: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		color: white;
+	}
 </style>
